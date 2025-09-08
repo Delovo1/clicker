@@ -33,8 +33,12 @@ document.getElementById("plus").onclick = () => {
     newImg.src =
       "https://www.factroom.ru/wp-content/uploads/2022/10/cover-screamer.jpg";
     document.body.appendChild(newImg);
+    setTimeout(() => {
+      newImg.remove();
+    }, 3000);
   }
 };
+
 document.getElementById("minus").onclick = () => {
   document.getElementById("number").innerHTML =
     +document.getElementById("number").innerHTML - 1;
