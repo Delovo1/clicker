@@ -25,10 +25,19 @@
 document.getElementById("plus").onclick = () => {
   document.getElementById("number").innerHTML =
     +document.getElementById("number").innerHTML + 1;
-  if (+document.getElementById("number").innerHTML % 20 === 0) {
+  if (
+    +document.getElementById("number").innerHTML === 22 ||
+    +document.getElementById("number").innerHTML === -22
+  ) {
     alert("Не пора ли остановиться?");
   }
-  if (+document.getElementById("number").innerHTML === 22) {
+  if (
+    +document.getElementById("number").innerHTML === 24 ||
+    +document.getElementById("number").innerHTML === -24
+  ) {
+    const audio = document.createElement("audio");
+    audio.src = "vyvyfvfy.mp3";
+    audio.autoplay = true;
     const newImg = document.createElement("img");
     newImg.src =
       "https://www.factroom.ru/wp-content/uploads/2022/10/cover-screamer.jpg";
@@ -42,4 +51,25 @@ document.getElementById("plus").onclick = () => {
 document.getElementById("minus").onclick = () => {
   document.getElementById("number").innerHTML =
     +document.getElementById("number").innerHTML - 1;
+  if (
+    +document.getElementById("number").innerHTML === 22 ||
+    +document.getElementById("number").innerHTML === -22
+  ) {
+    alert("Не пора ли остановиться?");
+  }
+  if (
+    +document.getElementById("number").innerHTML === 24 ||
+    +document.getElementById("number").innerHTML === -24
+  ) {
+    const audio = document.createElement("audio");
+    audio.src = "vyvyfvfy.mp3";
+    audio.autoplay = true;
+    const newImg = document.createElement("img");
+    newImg.src =
+      "https://www.factroom.ru/wp-content/uploads/2022/10/cover-screamer.jpg";
+    document.body.appendChild(newImg);
+    setTimeout(() => {
+      newImg.remove();
+    }, 3000);
+  }
 };
